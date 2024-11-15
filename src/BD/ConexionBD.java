@@ -15,11 +15,11 @@ public class ConexionBD {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection(url, user, password);
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/valeska", "root", "Leonchito123.");
         } catch (Exception e) {
         }
         
-    
+    return conexion;
     }
     
 }
