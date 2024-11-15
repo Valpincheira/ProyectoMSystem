@@ -2,6 +2,7 @@ package BD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.SQLException;
 
 /**
  *
@@ -16,7 +17,8 @@ public class ConexionBD {
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
             conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/valeska", "root", "Leonchito123.");
-        } catch (Exception e) {
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("error de conexion");
         }
         
     return conexion;
