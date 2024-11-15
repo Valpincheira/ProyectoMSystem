@@ -17,6 +17,9 @@ public class RegistroProducto {
             ConexionBD conexion = new ConexionBD();
             Connection cnx = conexion.obtenerConexion();  //Importar java.sql.connection
            
+            String query  ="select * from alumno";
+            
+            
         } catch (Exception e) {
         }
         
