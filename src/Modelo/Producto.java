@@ -55,4 +55,9 @@ public class Producto {
         System.out.println("Holita");
     }
     
+    public void holas(){
+        System.out.println("Holita");
+    }
+    
+    
 }
