@@ -43,12 +43,16 @@ public class Producto {
     public void setPrecio_prod(int precio_prod) {
         this.precio_prod = precio_prod;
     }
+    
 
     @Override
     public String toString() {
         return "Producto{" + "id_prod=" + id_prod + ", nom_prod=" + nom_prod + ", precio_prod=" + precio_prod + '}';
+        
     }
     
-    
+    public void hola(){
+        System.out.println("Holita");
+    }
     
 }
