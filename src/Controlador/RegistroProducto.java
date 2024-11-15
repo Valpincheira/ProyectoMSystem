@@ -1,6 +1,7 @@
 
 package Controlador;
 
+import BD.ConexionBD;
 import Modelo.Producto;
 import java.sql.Connection;
 
@@ -13,11 +14,13 @@ public class RegistroProducto {
     
     public boolean agregarProducto(Producto producto){
         try {
-            ConexionBD conexion = new ConexionBD;
+            ConexionBD conexion = new ConexionBD();
             Connection cnx = conexion.obtenerConexion();  //Importar java.sql.connection
            
         } catch (Exception e) {
         }
+        
+        return true;
     }
     
 }
