@@ -2,12 +2,11 @@ package BD;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLException;
 
+  
 /**
  *
- * @author valmi
- * version 14-11-2024
+ * @author opazo-oses-pincheira-sanchez nov 2024
  */
 public class ConexionBD {
     
@@ -16,12 +15,13 @@ public class ConexionBD {
         
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
-            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/valeska", "root", "Leonchito123.");
-        } catch (ClassNotFoundException | SQLException e) {
+            conexion = DriverManager.getConnection("jdbc:mysql://localhost:3306/msystem", "root", "Leonchito123.");
+            System.out.println("Conexión exitosa");
+        } catch (Exception e) {
             System.out.println("error de conexion");
         }
         
-    return conexion;
+        return conexion;
     }
     
 }

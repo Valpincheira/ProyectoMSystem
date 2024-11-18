@@ -1,12 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package Vista;
 
+import Controlador.RegistroMesa;
+import Modelo.Mesa;
+import javax.swing.JOptionPane;
+
 /**
- *
- * @author valmi
+ * @author opazo-oses-pincheira-sanchez nov 2024
  */
 public class Frm_MenuAdmin extends javax.swing.JFrame {
 
@@ -26,51 +25,110 @@ public class Frm_MenuAdmin extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jbtn_cerrarSesion = new javax.swing.JButton();
         jMenuBar2 = new javax.swing.JMenuBar();
         jmb_opcionAdmin = new javax.swing.JMenu();
         jm_producto = new javax.swing.JMenu();
-        jMenuItem9 = new javax.swing.JMenuItem();
-        jMenuItem10 = new javax.swing.JMenuItem();
+        jmi_agregarProd = new javax.swing.JMenuItem();
+        jmi_editarProd = new javax.swing.JMenuItem();
         jmi_listarProd = new javax.swing.JMenuItem();
-        jMenuItem12 = new javax.swing.JMenuItem();
+        jmi_borrarProd = new javax.swing.JMenuItem();
         jm_garzones = new javax.swing.JMenu();
         jmi_agregarGarzon = new javax.swing.JMenuItem();
         jmi_editarGarzon = new javax.swing.JMenuItem();
         jmi_listarGarzon = new javax.swing.JMenuItem();
         jmi_borrarGarzon = new javax.swing.JMenuItem();
-        jm_mesas = new javax.swing.JMenu();
-        jmi_agregarMesa = new javax.swing.JMenuItem();
-        jmi_listarMesa = new javax.swing.JMenuItem();
-        jmi_borrarMesa = new javax.swing.JMenuItem();
-        jmb_cerrarSesionAdmin = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/M-system-logo.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        jLabel1.setToolTipText("");
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel1.setFont(new java.awt.Font("Candara Light", 1, 24)); // NOI18N
+        jLabel1.setText("MENU ADMINISTRADOR");
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/cocinero (1).png"))); // NOI18N
+
+        jbtn_cerrarSesion.setFont(new java.awt.Font("Candara Light", 1, 14)); // NOI18N
+        jbtn_cerrarSesion.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/cerrar-sesion.png"))); // NOI18N
+        jbtn_cerrarSesion.setText("Cerrar Sesion");
+        jbtn_cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_cerrarSesionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(104, 104, 104)
+                .addComponent(jLabel2)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(112, 112, 112)
+                .addComponent(jLabel1)
+                .addGap(0, 121, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jbtn_cerrarSesion)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbtn_cerrarSesion)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addContainerGap())
+        );
 
         jmb_opcionAdmin.setText("Opciones");
 
         jm_producto.setText("Productos");
-
-        jMenuItem9.setText("Agregar");
-        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+        jm_producto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem9ActionPerformed(evt);
+                jm_productoActionPerformed(evt);
             }
         });
-        jm_producto.add(jMenuItem9);
 
-        jMenuItem10.setText("Editar");
-        jm_producto.add(jMenuItem10);
+        jmi_agregarProd.setText("Agregar");
+        jmi_agregarProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_agregarProdActionPerformed(evt);
+            }
+        });
+        jm_producto.add(jmi_agregarProd);
+
+        jmi_editarProd.setText("Editar");
+        jmi_editarProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_editarProdActionPerformed(evt);
+            }
+        });
+        jm_producto.add(jmi_editarProd);
 
         jmi_listarProd.setText("Listar");
+        jmi_listarProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listarProdActionPerformed(evt);
+            }
+        });
         jm_producto.add(jmi_listarProd);
 
-        jMenuItem12.setText("Borrar");
-        jm_producto.add(jMenuItem12);
+        jmi_borrarProd.setText("Borrar");
+        jmi_borrarProd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_borrarProdActionPerformed(evt);
+            }
+        });
+        jm_producto.add(jmi_borrarProd);
 
         jmb_opcionAdmin.add(jm_producto);
 
@@ -85,33 +143,32 @@ public class Frm_MenuAdmin extends javax.swing.JFrame {
         jm_garzones.add(jmi_agregarGarzon);
 
         jmi_editarGarzon.setText("Editar");
+        jmi_editarGarzon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_editarGarzonActionPerformed(evt);
+            }
+        });
         jm_garzones.add(jmi_editarGarzon);
 
         jmi_listarGarzon.setText("Listar");
+        jmi_listarGarzon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_listarGarzonActionPerformed(evt);
+            }
+        });
         jm_garzones.add(jmi_listarGarzon);
 
         jmi_borrarGarzon.setText("Borrar");
+        jmi_borrarGarzon.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jmi_borrarGarzonActionPerformed(evt);
+            }
+        });
         jm_garzones.add(jmi_borrarGarzon);
 
         jmb_opcionAdmin.add(jm_garzones);
 
-        jm_mesas.setText("Mesas");
-
-        jmi_agregarMesa.setText("Agregar");
-        jm_mesas.add(jmi_agregarMesa);
-
-        jmi_listarMesa.setText("Listar");
-        jm_mesas.add(jmi_listarMesa);
-
-        jmi_borrarMesa.setText("Borrar");
-        jm_mesas.add(jmi_borrarMesa);
-
-        jmb_opcionAdmin.add(jm_mesas);
-
         jMenuBar2.add(jmb_opcionAdmin);
-
-        jmb_cerrarSesionAdmin.setText("Cerrar Sesion");
-        jMenuBar2.add(jmb_cerrarSesionAdmin);
 
         setJMenuBar(jMenuBar2);
 
@@ -119,29 +176,75 @@ public class Frm_MenuAdmin extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(89, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(62, 62, 62))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addContainerGap(32, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
-        //
-    }//GEN-LAST:event_jMenuItem9ActionPerformed
+    private void jmi_agregarProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_agregarProdActionPerformed
+        Frm_AgregarProducto agregarProducto = new Frm_AgregarProducto();
+        agregarProducto.setVisible(true); 
+        agregarProducto.setLocationRelativeTo(null); //Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_agregarProdActionPerformed
 
     private void jmi_agregarGarzonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_agregarGarzonActionPerformed
-        // TODO add your handling code here:
+        Frm_agregarGarzon agregarGarzon = new Frm_agregarGarzon();
+        agregarGarzon.setVisible(true);
+        agregarGarzon.setLocationRelativeTo(null); // Centra la ventana en la pantalla
     }//GEN-LAST:event_jmi_agregarGarzonActionPerformed
+
+    private void jmi_editarProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_editarProdActionPerformed
+        Frm_EditarProd editarProducto = new Frm_EditarProd();
+        editarProducto.setVisible(true);
+        editarProducto.setLocationRelativeTo(null);//Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_editarProdActionPerformed
+
+    private void jmi_listarProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listarProdActionPerformed
+        Frm_ListarProd listarProducto = new Frm_ListarProd();
+        listarProducto.setVisible(true);
+        listarProducto.setLocationRelativeTo(null);//Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_listarProdActionPerformed
+
+    private void jmi_borrarProdActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_borrarProdActionPerformed
+        Frm_EliminarProd borrarProducto = new Frm_EliminarProd();
+        borrarProducto.setVisible(true);
+        borrarProducto.setLocationRelativeTo(null);//Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_borrarProdActionPerformed
+
+    private void jmi_editarGarzonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_editarGarzonActionPerformed
+        Frm_editarGarzon editarGarzon = new Frm_editarGarzon();
+        editarGarzon.setVisible(true);
+        editarGarzon.setLocationRelativeTo(null); // Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_editarGarzonActionPerformed
+
+    private void jmi_listarGarzonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_listarGarzonActionPerformed
+        Frm_listarGarzon listarGarzon = new Frm_listarGarzon();
+        listarGarzon.setVisible(true);
+        listarGarzon.setLocationRelativeTo(null);// Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_listarGarzonActionPerformed
+
+    private void jmi_borrarGarzonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_borrarGarzonActionPerformed
+        Frm_eliminarGarzon eliminarGarzon = new Frm_eliminarGarzon();
+        eliminarGarzon.setVisible(true);
+        eliminarGarzon.setLocationRelativeTo(null);// Centra la ventana en la pantalla
+    }//GEN-LAST:event_jmi_borrarGarzonActionPerformed
+
+    private void jbtn_cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cerrarSesionActionPerformed
+        Frm_InicioSesion is = new Frm_InicioSesion();
+        is.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jbtn_cerrarSesionActionPerformed
+
+    private void jm_productoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jm_productoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jm_productoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -181,22 +284,20 @@ public class Frm_MenuAdmin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar2;
-    private javax.swing.JMenuItem jMenuItem10;
-    private javax.swing.JMenuItem jMenuItem12;
-    private javax.swing.JMenuItem jMenuItem9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbtn_cerrarSesion;
     private javax.swing.JMenu jm_garzones;
-    private javax.swing.JMenu jm_mesas;
     private javax.swing.JMenu jm_producto;
-    private javax.swing.JMenu jmb_cerrarSesionAdmin;
     private javax.swing.JMenu jmb_opcionAdmin;
     private javax.swing.JMenuItem jmi_agregarGarzon;
-    private javax.swing.JMenuItem jmi_agregarMesa;
+    private javax.swing.JMenuItem jmi_agregarProd;
     private javax.swing.JMenuItem jmi_borrarGarzon;
-    private javax.swing.JMenuItem jmi_borrarMesa;
+    private javax.swing.JMenuItem jmi_borrarProd;
     private javax.swing.JMenuItem jmi_editarGarzon;
+    private javax.swing.JMenuItem jmi_editarProd;
     private javax.swing.JMenuItem jmi_listarGarzon;
-    private javax.swing.JMenuItem jmi_listarMesa;
     private javax.swing.JMenuItem jmi_listarProd;
     // End of variables declaration//GEN-END:variables
 }

@@ -6,7 +6,7 @@ package Vista;
 
 /**
  *
- * @author valmi
+ * @author opazo-oses-pincheira-sanchez nov 2024
  */
 public class Frm_MenuGarzon extends javax.swing.JFrame {
 
@@ -26,28 +26,65 @@ public class Frm_MenuGarzon extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jbtn_cerrarSesion = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jmb_opcionGarzon = new javax.swing.JMenu();
-        jmi_disponibilidad = new javax.swing.JMenuItem();
         jmi_ingresarVenta = new javax.swing.JMenuItem();
-        jmb_cerrarSesionGarzon = new javax.swing.JMenu();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setBackground(new java.awt.Color(204, 0, 51));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/M-system-logo.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        jPanel1.setBackground(new java.awt.Color(204, 204, 204));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/cocinero (1).png"))); // NOI18N
+
+        jLabel2.setFont(new java.awt.Font("Candara Light", 1, 24)); // NOI18N
+        jLabel2.setText("MENU GARZÓN");
+
+        jbtn_cerrarSesion.setFont(new java.awt.Font("Candara Light", 1, 14)); // NOI18N
+        jbtn_cerrarSesion.setText("Cerrar Sesión");
+        jbtn_cerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbtn_cerrarSesionActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(207, 207, 207)
+                        .addComponent(jLabel2)))
+                .addContainerGap(187, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(jbtn_cerrarSesion)
+                .addGap(19, 19, 19))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jbtn_cerrarSesion)
+                .addGap(43, 43, 43)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 283, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jLabel2)
+                .addGap(24, 24, 24))
+        );
 
         jmb_opcionGarzon.setText("Opciones");
 
-        jmi_disponibilidad.setText("Disponibilidad Mesa");
-        jmi_disponibilidad.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jmi_disponibilidadActionPerformed(evt);
-            }
-        });
-        jmb_opcionGarzon.add(jmi_disponibilidad);
-
+        jmi_ingresarVenta.setFont(new java.awt.Font("Candara Light", 1, 14)); // NOI18N
         jmi_ingresarVenta.setText("Ingresar Venta");
         jmi_ingresarVenta.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -58,38 +95,32 @@ public class Frm_MenuGarzon extends javax.swing.JFrame {
 
         jMenuBar1.add(jmb_opcionGarzon);
 
-        jmb_cerrarSesionGarzon.setText("Cerrar Sesion");
-        jMenuBar1.add(jmb_cerrarSesionGarzon);
-
         setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(80, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 245, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(75, 75, 75))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addContainerGap(32, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jmi_ingresarVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_ingresarVentaActionPerformed
-        // TODO add your handling code here:
+        Frm_Venta ingresarVenta = new Frm_Venta();
+        ingresarVenta.setVisible(true);
     }//GEN-LAST:event_jmi_ingresarVentaActionPerformed
 
-    private void jmi_disponibilidadActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jmi_disponibilidadActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jmi_disponibilidadActionPerformed
+    private void jbtn_cerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbtn_cerrarSesionActionPerformed
+        Frm_InicioSesion is = new Frm_InicioSesion();
+        is.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_jbtn_cerrarSesionActionPerformed
 
     /**
      * @param args the command line arguments
@@ -128,10 +159,11 @@ public class Frm_MenuGarzon extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenu jmb_cerrarSesionGarzon;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JButton jbtn_cerrarSesion;
     private javax.swing.JMenu jmb_opcionGarzon;
-    private javax.swing.JMenuItem jmi_disponibilidad;
     private javax.swing.JMenuItem jmi_ingresarVenta;
     // End of variables declaration//GEN-END:variables
 }
