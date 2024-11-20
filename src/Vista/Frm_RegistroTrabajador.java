@@ -228,7 +228,7 @@ public class Frm_RegistroTrabajador extends javax.swing.JFrame {
         String contraseña = String.valueOf(jp_contraseña.getPassword()).trim();
         String alias = jtxt_alias.getText().trim();
         String tipoTrabajador = (String) jc_puesto.getSelectedItem(); // Supongo que usas un JComboBox
-
+ 
         // Validar que todos los campos estén llenos
         if (nombre.isEmpty() || apellidoPaterno.isEmpty() || apellidoMaterno.isEmpty()|| contraseña.isEmpty() || alias.isEmpty() || tipoTrabajador == null) {
             JOptionPane.showMessageDialog(this, "Todos los campos son obligatorios.");
